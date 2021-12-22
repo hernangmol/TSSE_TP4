@@ -1,3 +1,7 @@
+
+/vendor
+/build 
+
 # Prerequisites
 *.d
 
