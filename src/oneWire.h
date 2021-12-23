@@ -17,10 +17,10 @@
 
 /*=====[Declaración de funciones públicas]===================================*/
 
-char OWcrc(char* code, char n);
+unsigned char OWcrc(unsigned char* code, char n);
 int  OWpresence(int, int);
 void OWcommand(char, char *, char, int, int);
-int  OWreadROM(char *, int, int);
+int  OWreadROM(unsigned char *, int, int);
 char OWsearch(OWbus_t* , char);
 void OWwriteByte(OWbus_t* OneWireStruct, char byte);
 char OWreadByte(OWbus_t*);

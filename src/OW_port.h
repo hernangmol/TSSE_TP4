@@ -72,5 +72,8 @@ char 	 OWreadBit(OWbus_t* OneWireStruct);
 void 	 OWwriteBit(OWbus_t* , char);
 void  	 disableInterrupts(void);
 void 	 enableInterrupts(void);
+//////////////////////////////////////////////
+int 	 OWpresence(int , int );
+void 	 OWcommand(char , char * , char , int , int );
 
 #endif /* MIS_PROGS_PCSE_TP_FINAL_INC_OW_PORT_H_ */
