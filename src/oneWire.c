@@ -9,6 +9,9 @@
 #include "oneWire.h"
 #include "OW_port.h"
 
+#define espera 400
+#define ReadROM 0x33
+
 /*=============================================================================
 * FUNCIÓN: OWresetSearch
 * Que hace: Inicializa los parámetros de busqueda (OWsearch).
@@ -60,10 +63,10 @@ int OWreadROM(unsigned char * buffer, int port, int pin)
 
 	if(OWpresence(port, pin)==0)
 	{
-		OWdelay_uS(400);
+		OWdelay_uS(espera);
 		disableInterrupts();
 		// comando Read ROM
-		OWcommand(0x33, buffer, 8, port, pin);
+		OWcommand(ReadROM, buffer, 8, port, pin);
 		enableInterrupts();
 		// chequea CRC
 		crc = OWcrc(buffer,7);
